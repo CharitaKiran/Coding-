@@ -1,0 +1,124 @@
+<html>
+    <head>
+<title>
+    My Home Fiannce Calculator
+</title>
+<link rel="stylesheet" href="mystyle.css">
+<style>
+    table,th,td {border: 2px solid rgba(0, 0, 0, 0.226);}
+  
+</style>
+<script>
+    function CalculateExp()
+    {
+        var total;
+        var rent=txtRent.value;
+        var utility = txtUtility.value;
+        var el = txtElectricity.value;
+        var gr = txtGroceries.value;
+        var gs = txtGas.value;
+        var pho = txtPhone.value;
+        var inter = txtInternet.value;
+        var cl = txtClasses.value;
+        var misc = txtMisc.value;
+        
+
+    var sal= txtSalary.value;
+    
+                    
+        total =  Number(rent) + Number(utility) + Number(el) + Number(gr) + Number(gs) + Number(pho) + Number(inter) + Number(cl) + Number(misc);
+        document.getElementById("lblTotalExp").innerHTML=total;
+
+        var savings = Number(sal) - Number(total);
+        document. getElementById("lblSavings").innerHTML=savings;
+
+
+    }
+</script>
+
+    </head>
+    <body>
+<table>
+    <th>Category</th>
+    <th>Amount($)</th>
+<tr>
+    <td>Monthly Salary</td>
+    <td><input type="number" id="txtSalary"></td>
+</tr>
+
+<tr>
+    <td>Rent</td>
+    <td><input type="number" id="txtRent"></td>
+</tr>
+
+<tr>
+    <td>Utility Bills</td>
+    <td><input type="number" id="txtUtility"></td>
+</tr>
+
+<tr>
+    <td>Electricty</td>
+    <td><input type="number" id="txtElectricity"></td>
+</tr>
+
+<tr>
+    <td>Groceries</td>
+    <td><input type="number" id="txtGroceries"></td>
+</tr>
+
+
+<tr>
+    <td>Gas</td>
+    <td><input type="number" id="txtGas"></td>
+</tr>
+
+<tr>
+    <td>Phone</td>
+    <td><input type="number" id="txtPhone"></td>
+</tr>
+
+<tr>
+    <td>Internet</td>
+    <td><input type="number" id="txtInternet"></td>
+</tr>
+
+<tr>
+    <td>Classes</td>
+    <td><input type="number" id="txtClasses"></td>
+</tr>
+
+<tr>
+    <td>Misc</td>
+    <td><input type="number" id="txtMisc"></td>
+</tr>
+<tr>
+    <td>Total Expenses</td>
+    <td>
+        <lable id=lblTotalExp></lable>
+    <button id="btnExpenses" type="button" onclick="CalculateExp()">Calculate</button>
+    </td>
+</tr>
+<tr>
+    
+</tr>
+</table>
+
+
+<table width="200" height="100" style="color: blue;">
+
+    <tr>
+
+        
+    <td>
+        <h1>  <b>Savings</td>
+            <td><lable id=lblSavings></lable> </b>  </h1>
+    
+    </td>
+
+
+</tr>
+
+
+</table>
+    </body>
+</html>
